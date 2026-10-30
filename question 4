@@ -1,0 +1,27 @@
+"""Discount and tax. A phone costs Rs 15,000. 
+Apply a 10% discount, then add 18% tax to the
+ discounted price, and print the final price.
+  Now do it the other way round: tax first, 
+  then the discount. Do you get the same answer? 
+  Write a comment in your code explaining why or why not"""
+
+
+
+price = 15000
+discount_rate = 10 / 100
+tax_rate = 18 / 100
+
+# Method 1: Pehle discount, phir tax
+discounted_price = price * (1 - discount_rate)
+final_price1 = discounted_price * (1 + tax_rate)
+
+print("Discount first:", final_price1)
+
+# Method 2: Pehle tax, phir discount
+price_with_tax = price * (1 + tax_rate)
+final_price2 = price_with_tax * (1 - discount_rate)
+
+print("Tax first:", final_price2)
+
+# Both give the same result because multiplying by
+# the discount factor and tax factor can be done in either order.

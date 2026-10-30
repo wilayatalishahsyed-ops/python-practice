@@ -1,0 +1,23 @@
+""" Packing boxes. A shop is shipping 23 items, 
+and each box holds 6. Using only arithmetic (no if), 
+print the number of full boxes, the number of items left over, 
+and the total number of boxes needed, including a partly full
+ one (expected: 3, 5 and 4). Each box costs Rs 120 to ship: 
+ print the shipping cost. Test your code with 24 items.
+   Does the box count still come out right?"""
+
+
+items = 23
+items_per_box = 6
+shipping_per_box = 120
+
+full_boxes = items // items_per_box
+leftover = items % items_per_box
+
+total_boxes = full_boxes + (leftover > 0)
+shipping_cost = total_boxes * shipping_per_box
+
+print(full_boxes)
+print(leftover)
+print(total_boxes)
+print(shipping_cost)

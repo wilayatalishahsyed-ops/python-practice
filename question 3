@@ -1,0 +1,17 @@
+"""Splitting a bill. Four friends split a Rs 4,750 dinner. 
+Print each person's share using /. Then look up the // and
+ % operators and use them to print how many whole rupees 
+ each person pays and how many rupees are left over"""
+
+
+bill = 4750
+friends = 4
+
+share = bill / friends
+whole_rupees = bill // friends
+leftover = bill % friends
+
+print(share)
+print(whole_rupees)
+print(leftover)
+
